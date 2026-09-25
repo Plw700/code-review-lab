@@ -13,6 +13,9 @@ function getDiscount(user, amount) {
   if (user === null || user === undefined) {
     throw new TypeError('user обязателен');
   }
+  if (typeof user !== 'object') {
+    throw new TypeError('user должен быть объектом');
+  }
   if (typeof amount !== 'number' || Number.isNaN(amount)) {
     throw new TypeError('amount должен быть числом');
   }
