@@ -1,0 +1,11 @@
+{
+  "name": "code-review-lab",
+  "version": "1.0.0",
+  "description": "Практическая работа №4: код-ревью через pull request",
+  "main": "discount.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "devDependencies": {}
+}
