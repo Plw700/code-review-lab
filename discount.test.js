@@ -44,7 +44,18 @@ describe('getDiscount: некорректные входные данные', ()
   test('отрицательная сумма — исключение', () => {
     expect(() => getDiscount({}, -100)).toThrow(RangeError);
   });
+  test('NaN — исключение', () => {
+    expect(() => getDiscount({}, NaN)).toThrow(TypeError);
+  });
 
+  test('user = строка — исключение', () => {
+    expect(() => getDiscount('user', 1000)).toThrow(TypeError);
+  });
+
+  test('user = Object.create(null) — допустимо', () => {
+    expect(getDiscount(Object.create(null), 4000)).toBe(200);
+  });
+  
   test('amount не число — исключение', () => {
     expect(() => getDiscount({}, '1000')).toThrow(TypeError);
   });
