@@ -29,3 +29,4 @@ function getDiscount(user, amount) {
 }
 
 module.exports = { getDiscount, TIER_HIGH, TIER_MID };
+function brokenSyntax( {
